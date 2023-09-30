@@ -41,9 +41,8 @@ class Program
                 maxnumber = number;
             }
         }
+
         Console.WriteLine($"The max number is: {maxnumber}");
-
-
     }
 }
 
