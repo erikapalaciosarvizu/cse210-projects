@@ -14,14 +14,15 @@ class Program
         DisplayResult(name, squared);
     }
 
-    static void DisplayWelcomeMessage()
+    static void DisplayWelcomeMessage() //void se utiliza cuando la funcion debe devolver algo
     {
         Console.WriteLine("Welcome to the program!");
     }
 
-    static string Promptname()
+    static string Promptname() //void aqui no se usa porque la funcion debe devolver algo
     {
-        Console.Write("Please enter your name: ");
+        Console.Write("Please enter your name: "); //solo uso Write para que me salga la opcion de a;adir respuesta en la misma linea
+        //si pongo write line, el input quedaria en la sioguiente linea
         string name = Console.ReadLine();
 
         return name;
@@ -41,8 +42,11 @@ class Program
         return square;
     }
 
-    static void DisplayResult(string name, int square)
+    static void DisplayResult(string name, int square) //mis resultados deben estar dentro de una funcion tambien
     {
-        Console.WriteLine($"{name}, the square of your number is: {square}");
+        Console.Write($"{name}, the square of your number is {square}");
     }
 }
+
+
+
