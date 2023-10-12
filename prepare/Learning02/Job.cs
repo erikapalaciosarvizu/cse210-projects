@@ -12,8 +12,9 @@ public class Job //public quiere decir que se va a poder acceder a esto desde cu
     public int _startYear;
     public int _endYear;
 
-    public void Display()
+    public void DisplayJob()
     {
         Console.WriteLine($"{_jobTitle} ({_company}) {_startYear}-{_endYear}");
     }
 }
+
