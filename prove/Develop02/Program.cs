@@ -5,7 +5,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Journal journal = new Journal();
+        //journal es un objeto que pertenece a la clase Journal// este objeto tiene sus propiedades y sus metodos 
+        Journal journal = new Journal(); //Creación de objeto tipo journal. Variable/objeto de tipo Journal // Iniciacion de variable/objeto tipo Journal.
+                                         //INSTANCIAR UNA CLASE (Cada que vea la palabra reservada new lo que estoy haciendo es una instancia/Ejemplarizacion)
         DisplayWelcomeMessage(); //
 
         Random rnd = new Random();
@@ -25,18 +27,16 @@ class Program
             if (chosenOption == "1")
             {
                 journal.AddEntry();
-                //Console.WriteLine("1. Write");
             }
             if (chosenOption == "2")
             {
-                journal.displayEntries();
-                //Console.WriteLine("1. Write");
+                journal.DisplayEntries();
             }
             if (chosenOption == "3")
             {
                 Console.WriteLine("Insert name of the file: ");
                 string name = Console.ReadLine();
-                journal.loadFile(name);
+                journal.LoadFile(name);
             }
             if (chosenOption == "4")
             {

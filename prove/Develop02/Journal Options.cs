@@ -2,8 +2,6 @@
 // with it like Save the journal, Load the Journal,
 // Write an entry in the journal, etc.
 
-
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -33,7 +31,7 @@ public class Journal
 
     }
 
-    public void displayEntries()
+    public void DisplayEntries()
     {
         foreach (Entry savedEntry in _entries) //la lista que quiero recorrer siempre va a la derecha del in. A la izquierda va la variable que representa cada elemento de la lista. savedFiel apenas la creamos
         //La parte izquierda del in se divide en dos partes, el tipo de dato y nombre de la variable. El tipo de dato se puede sustituir por el nombre de una clase si loque se busca es usar un objeto  
@@ -44,7 +42,7 @@ public class Journal
 
     }
 
-    public void loadFile(string nombrearchivo)
+    public void LoadFile(string nombrearchivo)
     {
         if (File.Exists(nombrearchivo))
         {
