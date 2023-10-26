@@ -13,7 +13,7 @@ public class Reference
         Book = book;
         Chapter = chapter;
         StartVerse = verse;
-        EndVerse = verse; // THIS INDICATES THAT IF IT IS A SINGLE VERSE, the beggining and the end are THE SAME
+        EndVerse = verse; // 
     }
 
     // CONSTRUCTOR *FOR MORE THAN ONE VERSE*
