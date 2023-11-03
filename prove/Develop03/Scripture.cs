@@ -1,21 +1,20 @@
-//Keeps track of the reference and the text of the scripture. Can hide words and get the rendered display of the text.
-
 public class Scripture
+
 {
-    public Reference Reference { get; private set; }
+    public Reference reference;
     //pass a List<Word> variable to the constructor. 
-    public List<Word> Words { get; private set; }
+    public List<Word> words;
 
     //CONSTRUCTOR
     public Scripture(Reference reference, string text)
     {
-        Reference = reference;
-        Words = new List<Word>();
+        this.reference = reference;
+        words = new List<Word>();
 
         //DIVIDE THE TEXT INTO WORDS AND CREATE WORD CLASS OBJECTS
         foreach (string wordText in text.Split(' '))
         {
-            Words.Add(new Word(wordText));
+            words.Add(new Word(wordText));
         }
     }
     //CREATE HIDDEN WORDS METHOD:
@@ -24,31 +23,42 @@ public class Scripture
         Random rand = new Random();
 
         // FILTERS WORDS THAT ARE COMPLETELY HIDDEN.
-        List<Word> wordsToHide = Words.Where(w => !w.IsHidden).ToList();
+        List<Word> wordsToHide = new List<Word>();
 
-        // IF THERE ARE NO WORDS LEFT TO HIDE, COME BACK
+        foreach (Word word in words)
+        {
+            if (!word.isHidden)
+            {
+                wordsToHide.Add(word);
+            }
+        }
+
         if (wordsToHide.Count == 0)
         {
             return;
         }
 
-        // ** THIS PART CHOOSE A RANDOM WORD FROM THE WORDS THAT ARE NOT COMPLETELY HIDDEN.
         int indexToHide = rand.Next(wordsToHide.Count);
         wordsToHide[indexToHide].Hide();
     }
 
-    //METHOD
-    public string GetRenderedText() /// this thing is what makes it work and not delete everything added to the program class.
+    public string GetRenderedText()
     {
-        return $"{Reference.Book} {Reference.Chapter}:{Reference.StartVerse}-{Reference.EndVerse} " +
-               string.Join(" ", Words.Select(w => w.GetRenderedText()));
+        return $"{reference.book} {reference.chapter}:{reference.startVerse}-{reference.endVerse} " +
+               string.Join(" ", words.Select(w => w.GetRenderedText()));
     }
 
-    //METHOD !!!
     public bool IsCompletelyHidden()
     {
-        return Words.All(w => w.IsHidden);
+        foreach (Word word in words)
+        {
+            if (!word.isHidden)
+            {
+                return false;
+            }
+        }
+        return true;
     }
-
-    //REFERENCEEEEE CLASS?
 }
+
+
