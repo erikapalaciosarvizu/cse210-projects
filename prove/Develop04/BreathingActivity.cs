@@ -6,9 +6,7 @@ class BreathingActivity : Activity
 
     public override void RunActivity()
     {
-        Console.Write("How long, in seconds, would you like for your session?: ");
-        _duration = int.Parse(Console.ReadLine());
-
+        base.RunActivity();
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
 

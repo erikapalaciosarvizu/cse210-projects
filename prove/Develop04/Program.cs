@@ -11,6 +11,7 @@ class Program
         do
         {
             // MENU 
+            Console.WriteLine("Welcome to the Mindfulness Program!\n");
             Console.WriteLine("Menu Options:");
             Console.WriteLine("  1. Breathing Activity");
             Console.WriteLine("  2. Reflecting Activity");

@@ -19,7 +19,8 @@ class Activity
 
     public void DisplayStartingMessage()
     {
-        Console.WriteLine($"Welcome to the {_name}!\n"); // Shows the name of the activity when selected
+        Console.Clear();
+        Console.WriteLine($"Welcome to the {_name} Activity!\n"); // Shows the name of the activity when selected
         Console.WriteLine($"•{_description} \n"); //Shows the description of the activity when selected
         Console.Write("How long, in seconds, would you like for your session?: ");
         _duration = int.Parse(Console.ReadLine());
