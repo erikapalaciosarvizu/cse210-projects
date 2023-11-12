@@ -9,27 +9,29 @@ Get Rendered Text */
 
 public class Word
 {
-    private string _textWord;
-    public bool _isHidden;
+    private string _textWord; //CONTAINS THE WORD
+    private bool _isHidden; //BOOLEAN THAT INDICATES WHETHER THE WORD IS HIDDEN OR NOT.
 
     // Constructorrrrr
     public Word(string text)
     {
         _textWord = text;
-        _isHidden = false; //false because INITIALLY the word IS NOT HIDDEN.
+        _isHidden = false;
     }
-    public string TextWord => _textWord;
-    public bool IsHidden => _isHidden;
+
 
     public void Hide()
     {
-        _isHidden = true; //THIS IS ALREADY TRUE BECAUSE THE WORD IS ALREADY HIDDEN.
+        _isHidden = true;
+    }
+    //THIS IS ALREADY TRUE BECAUSE THE WORD IS ALREADY HIDDEN.
+    public bool IsHidden
+    {
+        get { return _isHidden; }
     }
 
-    public string GetRenderedText()
+    public string GetRenderedText()//THIS METHOD RETURNS UNDERSCORES IF THE WORD IS HIDDEN.
     {
-        return IsHidden ? new string('_', TextWord.Length) : TextWord;
+        return _isHidden ? new string('_', _textWord.Length) : _textWord;
     }
 }
-
-

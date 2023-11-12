@@ -1,4 +1,5 @@
 //Keeps track of the book, chapter, and verse information.
+
 public class Reference
 {
     public string _book;
@@ -6,8 +7,8 @@ public class Reference
     private int _startVerse;
     private int _endVerse;
 
-    // Constructor FOR *ONE* VERSE*.
-    public Reference(string book, int chapter, int verse) //TAKES 3 PARAMETERS
+    // Constructor 1 VERSE
+    public Reference(string book, int chapter, int verse)
     {
         _book = book;
         _chapter = chapter;
@@ -15,12 +16,32 @@ public class Reference
         _endVerse = verse;
     }
 
-    // CONSTRUCTOR *FOR MORE THAN ONE VERSE*
-    public Reference(string book, int chapter, int startVerse, int endVerse) //Takes 4 parameters--CONSTRUCTOR OVERLOAD???
+    // Constructor +1 VERSE
+    public Reference(string book, int chapter, int startVerse, int endVerse)
     {
         _book = book;
         _chapter = chapter;
         _startVerse = startVerse;
         _endVerse = endVerse;
+    }
+
+    public string GetBook()
+    {
+        return _book;
+    }
+
+    public int GetChapter()
+    {
+        return _chapter;
+    }
+
+    public int GetStartVerse()
+    {
+        return _startVerse;
+    }
+
+    public int GetEndVerse()
+    {
+        return _endVerse;
     }
 }

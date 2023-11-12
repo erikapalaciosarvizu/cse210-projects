@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Program
 {
@@ -11,6 +12,7 @@ public class Program
         new Scripture(new Reference("D&C", 39, 22), "And he that receiveth these things receiveth me, and they shall be gathered unto me in time and in eternity."),
         new Scripture(new Reference("D&C", 61, 39), "Pray always that you enter not into temptation, that you may abide the day of his coming, whether in life or in death. Even so. Amen")
     };
+
 
     public static void Main(string[] args)
     {
