@@ -2,8 +2,8 @@
 
 public class Reference
 {
-    public string _book;
-    public int _chapter;
+    private string _book;
+    private int _chapter;
     private int _startVerse;
     private int _endVerse;
 
