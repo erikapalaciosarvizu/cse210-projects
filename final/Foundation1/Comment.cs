@@ -1,23 +1,23 @@
 using System;
 using System.Collections.Generic;
 
-// almacenar información sobre los comentarios
+// store information about comments
 class Comment
 {
     // ATTRIBUTES
-    private string commenterName;
+    private string _userName;
     private string commentText;
 
     // CONSTRUCTOR
     public Comment(string name, string text)
     {
-        commenterName = name;
+        _userName = name;
         commentText = text;
     }
 
     // SHOW COMMENTS
     public void DisplayComment()
     {
-        Console.WriteLine($"{commenterName}: {commentText}");
+        Console.WriteLine($"{_userName}: {commentText}");
     }
 }

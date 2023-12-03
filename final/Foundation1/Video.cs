@@ -1,24 +1,24 @@
 class Video
 {
     // ATTRIBUTES.
-    private string title;
-    private string author;
-    private string lengthInMinutes;
+    private string _title;
+    private string _author;
+    private int _lengthInSeconds;
     private List<Comment> comments;
 
     // constructor.
-    public Video(string title, string author, string length)
+    public Video(string title, string author, int length)
     {
-        this.title = title;
-        this.author = author;
-        lengthInMinutes = length;
+        this._title = title;
+        this._author = author;
+        _lengthInSeconds = length;
         comments = new List<Comment>();
     }
 
     // METHOD TO ADD A COMMENT TO THE VIDEO.
-    public void AddComment(string commenterName, string commentText)
+    public void AddComment(string userName, string commentText)
     {
-        Comment newComment = new Comment(commenterName, commentText);
+        Comment newComment = new Comment(userName, commentText);
         comments.Add(newComment);
     }
 
@@ -31,9 +31,9 @@ class Video
     // to display video information and comments.
     public void ShowVideoInfo()
     {
-        Console.WriteLine($"Title: {title}");
-        Console.WriteLine($"Author: {author}");
-        Console.WriteLine($"Length: {lengthInMinutes} minutes");
+        Console.WriteLine($"Title: {_title}.");
+        Console.WriteLine($"Author: {_author}.");
+        Console.WriteLine($"Length: {_lengthInSeconds} seconds.");
         Console.WriteLine($"Number of Comments: {GetNumberOfComments()}");
 
         // Show each video comment
