@@ -5,20 +5,20 @@ class Product
 {
     private string _name;
     private string _productId;
-    private double price;
+    private double _price;
     private int _quantity;
 
     public Product(string name, string productId, double price, int quantity)
     {
         this._name = name;
         this._productId = productId;
-        this.price = price;
+        this._price = price;
         this._quantity = quantity;
     }
 
     public double GetTotalPrice()
     {
-        return price * _quantity;  // Calculate the total price
+        return _price * _quantity;  // Calculate the total price
     }
 
     public string GetName()

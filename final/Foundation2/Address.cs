@@ -7,24 +7,24 @@ class Address
     private string _streetAddress;
     private string _city;
     private string _stateOrProvince;
-    private string country;
+    private string _country;
 
     public Address(string streetAddress, string city, string stateProvince, string country)
     {
         this._streetAddress = streetAddress;
         this._city = city;
         this._stateOrProvince = stateProvince;
-        this.country = country;
+        this._country = country;
     }
 
     public bool IsInUSA()
     {
-        return country.Equals("USA", StringComparison.OrdinalIgnoreCase);  // Check if the address is in the USA
+        return _country.Equals("USA", StringComparison.OrdinalIgnoreCase);  // Check if the address is in the USA
     }
 
     public string GetAddressString()
     {
         // full address
-        return $"{_streetAddress}\n{_city}, {_stateOrProvince}\n{country}";
+        return $"{_streetAddress}\n{_city}, {_stateOrProvince}\n{_country}";
     }
 }
