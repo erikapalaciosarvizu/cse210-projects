@@ -1,0 +1,24 @@
+class Address
+{
+    private string _street;
+    private string _city;
+    private string _state;
+    private string _zipCode;
+
+    public Address(string street, string city, string state, string zipCode)
+    {
+        _street = street;
+        _city = city;
+        _state = state;
+        _zipCode = zipCode;
+    }
+
+    // method to provide a formatted address string.
+    public override string ToString()
+    {
+        return $"{_street}, {_city}, {_state} {_zipCode}";
+    }
+}
+
+
+
