@@ -2,11 +2,13 @@ class Running : Activity
 {
     private double distance;
 
+    // Constructor
     public Running(DateTime date, int minutes, double distance) : base(date, minutes)
     {
         this.distance = distance;
     }
 
+    // Overrides the base class method
     public override double GetDistance()//Distance 
     {
         return distance;

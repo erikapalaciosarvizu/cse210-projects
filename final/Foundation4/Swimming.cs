@@ -2,11 +2,14 @@ class Swimming : Activity
 {
     private int _laps;
 
+    // Constructor
     public Swimming(DateTime date, int minutes, int laps) : base(date, minutes)
     {
         this._laps = laps;
     }
 
+
+    // Overrides the base class methods 
     public override double GetDistance()
     {
         return _laps * 50 / 1000.0;
