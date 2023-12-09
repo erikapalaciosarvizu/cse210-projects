@@ -2,11 +2,13 @@ class Cycling : Activity
 {
     private double _speed;
 
+    // Constructor
     public Cycling(DateTime date, int minutes, double speed) : base(date, minutes)
     {
         this._speed = speed;
     }
 
+    // Overrides the base class Methods.
     public override double GetSpeed()
     {
         return _speed;
